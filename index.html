@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="근본적인 원인을 집요하게 추적하고 해결하는 개발자 안민재의 포트폴리오입니다.">
+    <meta property="og:title" content="안민재 | 신입 개발자 포트폴리오"/>
+    <meta property="og:description" content="문제가 발생한 근본적인 원인을 집요하게 추적하고 명확하게 해결합니다."/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://picsum.photos/1200/630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="안민재 | 신입 개발자 포트폴리오" />
+    <meta name="twitter:description" content="문제가 발생한 근본적인 원인을 집요하게 추적하고 명확하게 해결합니다." />
+    <title>안민재 | 신입 개발자 포트폴리오</title>
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="navbar-branding"><span style="color: #8358cd; font-weight: 800;">M</span>INJAE</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#hero__section" class="nav-link">홈</a></li>
+                <li class="nav-item"><a href="#project__section" class="nav-link">프로젝트</a></li>
+                <li class="nav-item"><a href="#board__section" class="nav-link">게시판</a></li>
+                <li class="nav-item">
+                    <div class="mode__con">
+                        <img class="lightswitch" src="assets/moon.svg" alt="달 아이콘">
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <div class="icon nav-icon-6">
+                    <span></span>   
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="hero__section">
+            <article class="left-hero" data-aos="fade-up">
+                <p class="txt__upper">안녕하세요 👋 저는,</p>
+                <h1 class="txt">안민재</h1>
+                <h2 class="txt__under">신입 개발자입니다. 💻</h2>
+                <p class="desc">문제가 발생한 근본적인 원인을 집요하게 추적하고, 이를 명확하게 해결하는 과정에서 가장 큰 몰입을 합니다.</p>
+            </article>
+            <div class="right-hero" data-aos="fade-up">
+                <img id="hero__img" src="assets/undraw_developer_activity_re_39tg.svg" alt="메인 이미지">
+            </div>
+        </section>
+
+        <section class="projects" id="project__section">
+            <h3 class="project-heading" data-aos="fade-up">주요 프로젝트</h3>
+            <div class="project-showcase" data-aos="fade-up">
+                
+                <div class="project-visual">
+                    <img src="https://picsum.photos/600/400" alt="프로젝트 메인 이미지">
+                </div>
+                
+                <div class="project-detail">
+                    <div class="project-header">
+                        <h4><b>타임캡슐 보이스</b></h4>
+                        <a href="https://huggingface.co/openai/whisper-large-v3-turbo" target="_blank" class="tech-badge">STT (Whisper-Turbo)</a>
+                        <a href="https://huggingface.co/dnotitia/DNA-2.0-14B" target="_blank" class="tech-badge">LLM (DNA-2.0-14B)</a>
+                        <a href="https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base" target="_blank" class="tech-badge">TTS (Qwen3-TTS)</a>
+                        <span class="tech-badge">Python</span>
+                    </div>
+                    
+                    <div class="project-body">
+                        <p class="project-intro">📌 <b>한 줄 소개:</b> 사용자의 음성을 <b>Whisper-Turbo 모델로 실시간 인식(STT)</b>하고, 한국어 특화 LLM이 답변을 생성(DNA-2.0)한 뒤, 이를 학습된 고유의 목소리로 변환(Qwen3-TTS)하여 출력하는 엔드투엔드(End-to-End) 음성 기반 인터랙티브 AI 에이전트 프로젝트입니다.</p>
+
+                        <div class="trouble-shooting">
+                            <h5><span class="icon-q">🔍</span> 발견한 문제점 (Problem)</h5>
+                            <p><b>1. 베이스 모델의 언어 편향 문제:</b> 초기 아키텍처 설계 당시 글로벌 베이스 모델을 LLM으로 채택했으나, 한국어 대화 흐름 도중 문맥에 맞지 않는 중국어 표현이 빈번하게 출력되어 대화의 몰입도를 깨뜨리는 현상이 발생했습니다.</p>
+                            <p><b>2. TTS 텍스트 정규화(G2P) 오류:</b> 음성 변환 과정에서 숫자 부호("0", "1" 등)를 문맥에 맞는 자연스러운 한국어(공, 일, 하나 등)로 읽지 못하고 타 언어식 발음으로 엉뚱하게 낭독하여 음성 답변의 직관성이 크게 저하되는 문제를 포착했습니다.</p>
+                            
+                            <h5><span class="icon-a">⚙️</span> 원인 분석 및 해결 (Solution)</h5>
+                            <p><b>1. 한국어 특화 LLM 교체 및 파이프라인 최적화:</b> 단순한 프롬프트 엔지니어링만으로는 모델 자체의 언어 편향을 해결하기 어렵다고 판단하여, 한국어 언어 이해도와 성능이 검증된 국산 오픈소스 LLM인 <b>`dnotitia/DNA-2.0-14B`</b>로 전격 교체했습니다. 더불어 STT 단계에서 <b>`Whisper-Turbo`</b> 모델을 연계하여 전체 음성 파이프라인의 지연 시간(Latency)을 최소화하고, 100% 자연스러운 한국어 실시간 대화 플로우를 확보했습니다.</p>
+                            <p><b>2. 데이터 전처리 딕셔너리 구축을 통한 발음 디버깅:</b> TTS 엔진이 원시 숫자 데이터를 그대로 받아들일 때 발생하는 정규화 오류임을 분석해 낸습니다. 이를 해결하기 위해 텍스트가 TTS 모듈로 진입하기 직전 단계에서 숫자 패턴을 감지하여 정형화된 한국어 텍스트(`"0" -> "공"`, `"1" -> "일"`)로 강제 치환해 주는 전처리 파이프라인(G2P 보완 로직)을 직접 구현하여 발음 오류를 완벽히 해결했습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="board" id="board__section">
+            <h3 class="board-heading" data-aos="fade-up">게시판</h3>
+            
+            <div class="board-form" data-aos="fade-up">
+                <div class="form-row">
+                    <input type="text" id="boardAuthor" placeholder="이름을 입력하세요">
+                    <select id="boardType">
+                        <option value="peer">동료</option>
+                        <option value="client">클라이언트</option>
+                        <option value="visitor" selected>방문자</option>
+                    </select>
+                </div>
+                <textarea id="boardContent" placeholder="여기에 글을 써주시면 됩니다!"></textarea>
+                <button type="button" class="board-submit-btn">등록하기</button>
+            </div>
+
+            <div class="board-container" id="boardContainer" data-aos="fade-up">
+            </div>
+        </section>
+    </main>
+
+    <footer class="ftr">
+        <div class="footer-info">
+            <span>📞 010-4485-5698</span>
+            <span>✉️ <a href="mailto:dksalswo01@naver.com">dksalswo01@naver.com</a></span>
+            <span>🐱 <a href="https://github.com/Lypew" target="_blank">github.com/Lypew</a></span>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2026 안민재. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        
+        AOS.init({
+            once: true,
+            delay: 0
+        });
+    </script>
+    
+    <div class="chat-widget">
+        <button class="chat-trigger-btn">🤖</button>
+        
+        <div class="floating-chat-container" id="chatWidgetContainer">
+            <div class="chat-header">
+                <span>안민재 AI 비서 🤖</span>
+                <button class="chat-close-btn">×</button>
+            </div>
+            <div class="chat-box" id="chatBox">
+                <div class="message bot-message">안녕하세요! 신입 개발자 안민재의 AI 비서입니다. 민재님의 강점, 연락처, 기술 스택 등 궁금한 점을 편하게 물어보세요! 😊</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="키워드('강점', '연락처') 입력...">
+                <button id="sendBtn">전송</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

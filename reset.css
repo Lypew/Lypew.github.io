@@ -1,0 +1,67 @@
+/* 1. 모든 요소의 박스 크기 기준 및 여백 초기화 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+  
+* {
+    margin: 0;
+    padding: 0; /* ✨ 추가: 브라우저 기본 패딩 제거 */
+}
+
+/* 2. 문서 및 바디 기본 높이와 부드러운 글꼴 렌더링 */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 3. 미디어 요소 블록화 및 비율 유지 */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 4. 폼 및 버튼 요소 폰트 상속 및 버튼 커서 기본값 설정 */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer; /* ✨ 추가: 모든 버튼에 손가락 커서 기본 적용 */
+}
+
+/* 5. 링크 기본 스타일 초기화 */
+a {
+    text-decoration: none; /* ✨ 추가: 링크 밑줄 제거 */
+    color: inherit;         /* ✨ 추가: 부모 글자색 상속 */
+}
+
+/* 6. 리스트 기본 불릿 제거 */
+ul,
+ol {
+    list-style: none; /* ✨ 추가: index.css에 있던 li 리셋을 이쪽으로 통합 */
+}
+
+/* 7. 텍스트 긴 단어 자동 줄바꿈 예방 */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
