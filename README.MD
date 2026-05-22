@@ -69,7 +69,7 @@ MyPortfolio-main/
 ## 🛠️ 3. 상세 사전 준비 사항
 ------------------------------
 ① Ollama 엔진 설치 및 LLM 모델 다운로드
-1. Ollama 공식 홈페이지(https://ollama.com)에서 OS에 맞는 버전을 설치합니다.
+1. [Ollama 공식 홈페이지](https://ollama.com)에서 OS에 맞는 버전을 설치합니다.
 2. 터미널(CMD/PowerShell)을 열고 아래 명령어로 가벼운 오픈소스 모델을 받습니다.
    ▶ 명령어: ollama run gemma2:2b
    (최초 1회 다운로드 이후에는 Ollama가 백그라운드에 켜져 있기만 하면 됩니다.)
